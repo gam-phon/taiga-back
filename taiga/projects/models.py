@@ -339,7 +339,6 @@ class Project(ProjectDefaults, TaggedMixin, models.Model):
 
     @property
     def cached_user_stories(self):
-        print(1111111, self._cached_user_stories)
         if self._cached_user_stories is None:
             self._cached_user_stories = list(self.user_stories.all())
 
